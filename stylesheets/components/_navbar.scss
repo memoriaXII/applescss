@@ -1,0 +1,13 @@
+// 調整選單字體的顏色
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-toggler {
+    color: rgba(24, 25, 24, 0.5);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(44, 44, 44, 0.8);
+}
+
+.navbar-light .navbar-nav .active .nav-link {
+    color: rgba(0, 0, 0, 0.9);
+}
