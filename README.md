@@ -1,4 +1,4 @@
-<img src="images/longwatchfaces.jpg">
+<img src="images/connectheader.jpg">
 
 
 
