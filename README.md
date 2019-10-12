@@ -1,5 +1,9 @@
-Weclome to my new Github project
+<img src="images/longwatchfaces.jpg">
 
+
+
+
+Inspire by Apple.com
 
 # Apple Website Scss Recreation
 Sass &amp; Scss Design - Apple Watch Series 5 Web Recreation
