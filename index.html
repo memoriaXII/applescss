@@ -46,7 +46,7 @@
                 <!-- 靠右 -->
                 <ul class="navbar-nav mt-2">
                     <li class="nav-item  mt-1 pl-0 pl-sm-3">
-                        <a class="nav-link text-white" href="./index.html">Mac</a>
+                      <button onclick="share">Share</button>
                     </li>
                     <li class="nav-item  mt-1 pl-0 pl-sm-3">
                         <a class="nav-link text-white" href="./product.html">iPad</a>
@@ -1442,7 +1442,93 @@
         AOS.init();
     </script>
     <script>
-        console.clear();
+        function share() {
+        if (navigator.share) {
+            navigator.share({
+                    title: "shit",
+                    text: "testing shit",
+                    url: "https://www.eatgether.com",
+                })
+                .then(() => console.log('Successful share'))
+                .catch((error) => console.log('Error sharing', error));
+        } else {
+            console.log("Web Share API is not supported in your browser.")
+        }
+    }
+        const age = 60;
+        age > 50 ?
+            age > 70 ? console.log('You are getting really old') :
+            console.log('You are between 30 to 70')
+
+        : console.log('you are bellow 30');
+
+
+        // Number to Strings
+        const year = 20 + '';
+        console.log(year);
+        console.log(typeof year);
+        //console.log(String);
+
+        //Fills Array
+        // const users = Array(5).fill(5);
+        const users = [
+            "Ed",
+            "Traversy Daddy",
+            "John Dough",
+            "The unemployed tech Lead",
+            "Anna",
+            "John Dough"
+        ];
+
+        // Unique Array
+        const unique = Array.from(new Set(users));
+        console.log(unique);
+
+        // Dynamic Objects
+        const dynamic = 'hobbies';
+        const child = {
+            name: 'Ed',
+            email: 'dev@aol.com',
+            [dynamic]: 'sleep'
+        }
+
+        console.log(child);
+
+        //slicing Array
+        const userArray = [1, 2, 3, 4, 5, 6, 7];
+        // userArray.length = 3;
+        // console.log(userArray);
+        console.log(userArray.slice(0, 1));
+
+        //get last value from Array
+        // console.clear();
+
+        //Array to Object
+
+        const numbers = [1, 2, 3, 4, 5, 6, 7];
+        const numbersObject = {...numbers
+        };
+
+        console.log(numbersObject);
+
+
+        //Objects to Arrays
+        const person = {
+            name: 'Ed',
+            ocupation: "Sex Model",
+            hobbies: "licking doors"
+        };
+        const personArray = Object.values(person);
+        console.log(personArray);
+
+        //check code performance
+        let startAt = performance.now();
+        for (let i = 0; i < 21920; i++) {
+            console.log(i);
+        }
+        let endAt = performance.now();
+        console.log(`${endAt-startAt} took millisceonds to excute`);
+
 
         ScrollOut({
             cssProps: {
